@@ -1,4 +1,4 @@
-class Schuetze(name: String, level: Int, hp: Int, mana: Int, amor: Int): Champion(name, level, hp, mana, amor) {
+class Caitlyn(name: String, level: Int, hp: Double, mana: Int, amor: Int): Champion(name, level, hp, mana, amor) {
 
     // Schütze heißt Caitlyn
     // Die normale Standarffähigkeit ist der Kopfschuss, alle paar Schüsse verdoppelter Schaden

@@ -1,4 +1,4 @@
-class Tank(name: String, level: Int, hp: Int, mana: Int, amor: Int): Champion(name, level, hp, mana, amor) {
+class Amumu(name: String, level: Int, hp: Double, mana: Int, amor: Int): Champion(name, level, hp, mana, amor) {
 
     // Tank ist Amumu
     // normale Standardfähigkeit ist die verfluchte Berührung, schadet den Gegner mit einem Fluch

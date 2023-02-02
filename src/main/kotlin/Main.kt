@@ -2,17 +2,20 @@ fun main (){
 
     println("🏴⚔️Willkommen bei Golden Syntax⚔️🏴")
 
-    var jinx = Kaempfer("Jinx", 30, 2072, 1010, 100)
-    var amumu = Tank ("Amumu", 30,  2500, 967, 150)
-    var caitlyn = Schuetze ("Caitlyn", 30,2091, 908, 100)
+    var jinx = Jinx("Jinx", 30, 2072.0, 1010, 100)
+    var amumu = Amumu ("Amumu", 30,  2500.0, 967, 150)
+    var caitlyn = Caitlyn ("Caitlyn", 30,2091.0, 908, 100)
+
+    var championListe = mutableListOf(jinx, amumu, caitlyn)
 
 
+    var baron = BaronNashor("Baron Nashor", 9000.0, 80)
+    var vasalle1 = Gegner ("Vasalle 1", 750.0, 25)
+    var vasalle2 = Gegner("Vasalle 2", 750.0, 25)
+    var vasalle3 = Gegner("Vasalle 3", 750.0, 25)
 
-    var baron = Gegner("Baron Nashor", 9000)
-    var vasalle1 = Gegner ("Vasalle 1", 750)
-    var vasalle2 = Gegner("Vasalle 2", 750)
-    var vasalle3 = Gegner("Vasalle 3", 750)
-    var gegnerListe = listOf(baron, vasalle1, vasalle2, vasalle3)
+    var gegnerListe = mutableListOf(baron, vasalle1, vasalle2, vasalle3)
+
 
     println("Die 3 Champions stehen fest:")
     println()
@@ -24,6 +27,8 @@ fun main (){
     println("🔹${baron.name} hat 3 Vasallen hinter sich mit jeweils einem HP-Wert von ${vasalle1.hp}.")
     println()
 
-    jinx.angriff(gegnerListe)
+    //jinx.angriff(gegnerListe)
+
+    baron.angriff(championListe)
 
 }
