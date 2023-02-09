@@ -1,21 +1,21 @@
-import java.util.function.DoublePredicate
-
-open class Champion (var name: String, var level: Int, var hp: Double, var mana: Int, var amor: Int) {
-
+open class Champion(var name: String, var level: Int, var hp: Double) { //Konstruktor
+    //Eigenschaften
     var isKo: Boolean = false
     var maxHp: Double = hp
 
-    fun loseHp(schaden: Double){
+    //Methoden
+    fun loseHp(schaden: Double) {
         this.hp -= schaden
-        println("Verbleibende Lebenspunkte von $name: $hp/$maxHp")
+        println("Verbleibende Lebenspunkte von $name: $hp / $maxHp")
 
-        if (this.hp <= 0){
+        if (this.hp <= 0) {
             isKo = true
-            println("Der Champion $name hat keine Lebenspunkte mehr und ist k.o!")
+            println("🚩Der Champion 🔸$name hat keine Lebenspunkte mehr und ist k.o!")
         }
     }
+    //Offene Fähigkeitensliste
+    open var faehigkeitenListe: MutableList<String> = mutableListOf()
 
-    open var faehigkeitenListe: MutableList <String> = mutableListOf()
-    open fun angriff(gegner: MutableList<Gegner>){}
-
+    //Offene Methode Angriff
+    open fun angriff(gegner: MutableList<Gegner>) {}
 }
